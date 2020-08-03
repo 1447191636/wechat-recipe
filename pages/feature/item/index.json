@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "鲸美味",
+  "usingComponents": {
+    "van-field": "/vant-weapp/dist/field/index",
+    "van-button": "/vant-weapp/dist/button/index",
+    "van-icon": "/vant-weapp/dist/icon/index"
+  }
+}

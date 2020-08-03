@@ -1,0 +1,42 @@
+page {
+  background: linear-gradient(#e1e1e1, #fff);
+  background-attachment: fixed;
+}
+
+.account-wrapper {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.description {
+  margin-top: 30rpx;
+  width: 500rpx;
+  line-height: 25px;
+  color: #757575;
+  font-size: 13px;
+}
+
+.input{
+  align-self: center;
+  margin-top: 100rpx;
+  width: 500rpx;
+  font-size: 30rpx;
+  height: 80rpx;
+  color: #929292;
+  text-align: center;
+  border-radius: 20rpx;
+  box-shadow: 0 0 10px #acacac;
+  background-color: #fff;
+}
+
+.input:last-child{
+  margin-top: 30rpx;
+}
+
+.account-wrapper .van-button{
+  width: 500rpx;
+  margin-top: 100rpx;
+}

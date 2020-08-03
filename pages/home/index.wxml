@@ -1,0 +1,20 @@
+<view class="home-wrapper">
+	<van-search placeholder="搜你想吃的" bind:search="onSearch" />
+	<view class="title">- 今日精选 -</view>
+	<view class="select-wrapper">
+		<block wx:for="{{list}}" wx:key="id">
+			<view class="item-wrapper" bindtap="recipeInfo" data-id="{{item.id}}">
+				<view class="van-ellipsis">{{item.title}}</view>
+				<view class="info-wrapper">
+					<view class="author">{{item.author.username}}</view>
+					<van-icon name="eye-o" /><text>42246</text>
+					<van-icon name="star-o" cu /><text>566</text>
+				</view>
+				<image class="cover" src="{{item.cover}}"></image>
+			</view>
+		</block>
+	</view>
+
+	<!-- 占位，防止覆盖 -->
+	<view style="height:50px"></view>
+</view>

@@ -1,0 +1,46 @@
+<view class="search-wrapper">
+	<van-search value="{{ search }}" placeholder="搜你想吃的" bind:search="onSearch" />
+	<van-tabs swipeable animated color="#2a95ff" line-height="2px" bind:change="tabChange">
+		<van-tab title="菜谱">
+			<view wx:if="{{recipes.length >0}}" style="padding-top:20rpx">
+				<view wx:for="{{recipes}}" wx:key="id" class="item-wrapper" data-id="{{item.id}}" bindtap="recipeInfo">
+					<image class="cover" src="{{item.cover}}"></image>
+					<view class="recipeInfo-wrapper">
+						<view class="name van-ellipsis">{{item.title}}</view>
+						<view class="author">{{item.author.username}}</view>
+						<view class="info">123收藏 5喜欢</view>
+					</view>
+				</view>
+			</view>
+			<block wx:else>
+				<view class="no-wrapper">
+					<view class="no-info">
+						<image src="/images/no.jpg" class="no-img"></image>
+						<view class="no-content">暂无数据</view>
+					</view>
+				</view>
+			</block>
+		</van-tab>
+		<van-tab title="菜单">
+			<view wx:if="{{menus.length >0}}" style="padding-top:20rpx">
+				<view wx:for="{{menus}}" wx:key="id" class="card-wrapper">
+					<view class="card" bindtap="menuInfo" data-id="{{item.id}}">
+						<image src="{{item.cover}}" class="menu-cover"></image>
+						<view class="info-wrapper">
+							<view class="menu-name van-multi-ellipsis--l2">{{item.name}}</view>
+							<view class="menu-count">{{item.count}}道菜谱</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<block wx:else>
+				<view class="no-wrapper">
+					<view class="no-info">
+						<image src="/images/no.jpg" class="no-img"></image>
+						<view class="no-content">暂无数据</view>
+					</view>
+				</view>
+			</block>
+		</van-tab>
+	</van-tabs>
+</view>

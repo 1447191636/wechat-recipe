@@ -1,0 +1,18 @@
+<view class="user-wrapper">
+	<view class="avatar-wrapper">
+		<van-image round width="50" height="50" src="{{user.avatar}}" />
+		<view class="info-wrapper">
+			<view class="username">{{user.username}}</view>
+			<view class="sign">{{user.sign?user.sign:'快去跟大家介绍一下自己'}}</view>
+		</view>
+	</view>
+	<van-grid column-num="2" border="{{false}}">
+		<van-grid-item icon="coupon-o" text="菜谱管理" link-type="navigateTo" url="./recipes/index"/>
+		<van-grid-item icon="bill-o" text="菜单管理" link-type="navigateTo" url="./menus/index"/>
+	</van-grid>
+	<view class="cell-wrapper">
+		<van-cell is-link title="个人资料" icon="user-o" link-type="navigateTo" url="./space/index" />
+		<van-cell is-link title="修改密码" icon="records" link-type="navigateTo" url="./password/index" />
+		<van-cell is-link title="绑定账号" icon="exchange" link-type="navigateTo" url="./account/index" />
+	</view>
+</view>

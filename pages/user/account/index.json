@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "绑定账号",
+  "navigationBarBackgroundColor": "#e1e1e1",
+  "usingComponents": {
+    "van-button": "/vant-weapp/dist/button/index"
+  }
+}

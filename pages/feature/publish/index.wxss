@@ -1,0 +1,29 @@
+.publish-wrapper {
+  padding: 0 30rpx;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-wrapper {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.scroll-wrapper .van-uploader__wrapper {
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+}
+
+.publish-wrapper .van-button {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.publish-wrapper .van-uploader__preview {
+  margin: 8px 8px 0 0;
+}
+
+.publish-wrapper .van-uploader__upload {
+  margin: 8px 8px 0 0;
+}

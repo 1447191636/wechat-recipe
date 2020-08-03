@@ -1,0 +1,20 @@
+<view class="recipes-wrapper">
+	<block wx:if="{{list.length >0}}">
+		<view class="item-wrapper" wx:for="{{list}}" wx:key="id" data-id="{{item.id}}" bindtap="recipeInfo">
+			<image class="cover" src="{{item.cover}}"></image>
+			<view class="info-wrapper">
+				<view class="name van-ellipsis">{{item.title}}</view>
+				<view class="author">{{item.author.username}}</view>
+				<view class="info">123收藏 5喜欢</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="no-wrapper">
+			<view class="no-info">
+				<image src="/images/no.jpg" class="no-img"></image>
+				<view class="no-content">暂无数据</view>
+			</view>
+		</view>
+	</block>
+</view>

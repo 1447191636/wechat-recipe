@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/home/index",
+    "pages/home/search/index",
+    "pages/home/item/index",
+    "pages/home/menu/index",
+    "pages/feature/index",
+    "pages/feature/publish/index",
+    "pages/feature/item/index",
+    "pages/news/index",
+    "pages/user/index",
+    "pages/user/password/index",
+    "pages/user/space/index",
+    "pages/user/account/index",
+    "pages/user/recipes/index",
+    "pages/user/menus/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [{
+        "pagePath": "pages/home/index"
+      },
+      {
+        "pagePath": "pages/feature/index"
+      },
+      {
+        "pagePath": "pages/news/index"
+      },
+      {
+        "pagePath": "pages/user/index"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

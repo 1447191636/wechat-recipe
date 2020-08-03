@@ -1,0 +1,50 @@
+<view class="menus-wrapper">
+	<van-tabs swipeable animated sticky color="#2a95ff" line-height="2px">
+		<van-tab title="我创建的">
+			<view class="create-wrapper">
+				<block wx:if="{{createList.length >0}}">
+					<view wx:for="{{createList}}" wx:key="id" class="card-wrapper">
+						<view class="card" bindtap="menuInfo" data-id="{{item.id}}">
+							<image src="{{item.cover}}" class="cover"></image>
+							<view class="info-wrapper">
+								<view class="name van-multi-ellipsis--l2">{{item.name}}</view>
+								<view class="count">{{item.count}}道菜谱</view>
+							</view>
+						</view>
+					</view>
+				</block>
+				<block wx:else>
+					<view class="no-wrapper">
+						<view class="no-info">
+							<image src="/images/no.jpg" class="no-img"></image>
+							<view class="no-content">暂无数据</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</van-tab>
+		<van-tab title="我收藏的">
+			<view class="star-wrapper">
+				<block wx:if="{{starList.length >0}}">
+					<view wx:for="{{starList}}" wx:key="id" class="card-wrapper">
+						<view class="card" bindtap="menuInfo" data-id="{{item.id}}">
+							<image src="{{item.cover}}" class="cover"></image>
+							<view class="info-wrapper">
+								<view class="name van-multi-ellipsis--l2">{{item.name}}</view>
+								<view class="count">{{item.count}}道菜谱</view>
+							</view>
+						</view>
+					</view>
+				</block>
+				<block wx:else>
+					<view class="no-wrapper">
+						<view class="no-info">
+							<image src="/images/no.jpg" class="no-img"></image>
+							<view class="no-content">暂无数据</view>
+						</view>
+					</view>
+				</block>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>

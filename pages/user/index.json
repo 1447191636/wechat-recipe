@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#e1e1e1",
+  "usingComponents": {
+    "van-image": "/vant-weapp/dist/image/index",
+    "van-grid": "/vant-weapp/dist/grid/index",
+    "van-grid-item": "/vant-weapp/dist/grid-item/index",
+    "van-cell": "/vant-weapp/dist/cell/index",
+    "van-icon": "/vant-weapp/dist/icon/index"
+  }
+}

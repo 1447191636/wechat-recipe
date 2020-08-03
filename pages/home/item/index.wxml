@@ -1,0 +1,59 @@
+<view class="item-wrapper">
+	<image src="{{recipe.cover}}" class="cover"></image>
+	<view class="content-wrapper">
+		<view class="name">{{recipe.title}}</view>
+		<view class="info">66666人收藏 666666人浏览</view>
+		<view class="content">{{recipe.story}}</view>
+		<view class="user-wrapper">
+			<image src="{{recipe.author.avatar}}" class="avatar"></image>
+			<text>{{recipe.author.username}}</text>
+		</view>
+		<view class="title">-食材清单-</view>
+		<van-cell-group>
+			<block wx:for="{{recipe.ingredients}}" wx:key="index">
+				<van-cell title="{{item.material}}" value="{{item.weight}}" />
+			</block>
+		</van-cell-group>
+		<view class="title">-烹饪步骤-</view>
+		<block wx:for="{{recipe.steps}}" wx:key="index">
+			<view class="step-wrapper">
+				<image src="{{item.pic}}"></image>
+				<view class="step">{{index+1}}、{{item.des}}</view>
+			</view>
+		</block>
+		<view class="title">-小贴士-</view>
+		<view class="tips">{{recipe.tips}}</view>
+		<view class="icon-wrapper">
+			<text class="info">666人浏览</text>
+			<van-icon name="good-job-o" style="margin-right:30rpx" />
+			<van-icon name="star-o" />
+		</view>
+	</view>
+
+	<view class="comment-wrapper" wx:if="{{recipe.comments.length>0}}">
+		<view class="comment" wx:for="{{recipe.comments}}" wx:key="index">
+			<view class="user-wrapper">
+				<image src="{{item.author.avatar}}" class="avatar"></image>
+				<view class="info-wrapper">
+					<view class="username">{{item.author.username}}</view>
+					<view class="date">{{item.publishDate}}</view>
+				</view>
+				<van-icon name="comment-o" data-index="{{index}}" bindtap="backComment" />
+			</view>
+			<view class="content">
+				{{item.content}}
+			</view>
+		</view>
+	</view>
+	<view wx:else class="no-info">暂无评论</view>
+
+	<!-- 占位 -->
+	<view style="height:50px"></view>
+
+	<view class="input-wrapper">
+		<van-field value="{{ comment }}" placeholder="{{placeholder}}" bind:change="commentChange">
+			<van-icon name="edit" slot="left-icon" />
+			<van-button slot="button" type="info" size="small" bind:click="submitComment">发布</van-button>
+		</van-field>
+	</view>
+</view>

@@ -1,0 +1,8 @@
+<view class="login-wrapper">
+	<view class="body-wrapper">
+		<text class="title">愿每一餐都有美味也有你</text>
+		<text class="content">没有什么比吃好饭更重要\n开启美食生活\n记录你想吃的、爱吃的一切</text>
+		<image src="/images/login.jpg" class="cover"></image>
+		<van-button type="info" size="large" round open-type="getUserInfo" bind:getuserinfo="login">点击登录</van-button>
+	</view>
+</view>

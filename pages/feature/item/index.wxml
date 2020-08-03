@@ -1,0 +1,51 @@
+<view class="item-wrapper">
+	<view class="swiper-wrapper">
+		<swiper indicator-dots>
+			<block wx:for="{{feature.pictures}}" wx:key="index">
+				<swiper-item>
+					<image src="{{item}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="content-wrapper">
+		<view class="user-wrapper">
+			<image src="{{feature.author.avatar}}" class="avatar"></image>
+			<view class="name-wrapper">
+				<view class="username">{{feature.author.username}}</view>
+				<view class="date">{{publishDate}}</view>
+			</view>
+		</view>
+		<view class="title">{{feature.title}}</view>
+		<view class="content">{{feature.content}}</view>
+		<view class="info-wrapper">
+			<text class="info">666人浏览</text>
+			<van-icon name="like-o" style="margin-right:30rpx" />
+			<van-icon name="comment-o" />
+		</view>
+	</view>
+
+	<view class="comment-wrapper" wx:if="{{feature.comments.length>0}}">
+		<view class="comment" wx:for="{{feature.comments}}" wx:key="index">
+			<view class="user-wrapper">
+				<image src="{{item.author.avatar}}" class="avatar"></image>
+				<view class="name-wrapper">
+					<view class="username">{{item.author.username}}</view>
+					<view class="date">{{item.publishDate}}</view>
+				</view>
+				<van-icon name="comment-o" data-index="{{index}}" bindtap="backComment"/>
+			</view>
+			<view class="content">{{item.content}}</view>
+		</view>
+	</view>
+	<view wx:else class="no-info">暂无评论</view>
+
+	<!-- 占位 -->
+	<view style="height:54px"></view>
+
+	<van-field value="{{ comment }}" placeholder="{{placeholder}}" bind:change="commentChange">
+		<van-icon name="edit" slot="left-icon" />
+		<van-button slot="button" type="info" size="small" bind:click="submitComment">发布</van-button>
+	</van-field>
+</view>

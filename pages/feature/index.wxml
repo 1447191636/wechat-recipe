@@ -1,0 +1,21 @@
+<view class="feature-wrapper">
+	<view class="note-list" wx:for="{2}" wx:key="index">
+		<block wx:for="{{list[index]}}" wx:key="index">
+			<view class="item-wrapper" data-id="{{item.id}}" bindtap="featureInfo">
+				<image src="{{item.cover}}" mode='widthFix'></image>
+				<view class="info-wrapper">
+					<view class="title van-multi-ellipsis--l2">{{item.title}}</view>
+					<view class="user-wrapper">
+						<image src="{{item.author.avatar}}" class="avatar"></image>
+						<text>{{item.author.username}}</text>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+
+	<van-button round type="info" icon="edit" bind:click="onclick">写圈子</van-button>
+
+	<!-- 占位，防止覆盖 -->
+	<view style="height:50px"></view>
+</view>

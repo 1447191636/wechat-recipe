@@ -1,0 +1,17 @@
+<view class="password-wrapper">
+	<view class="item">
+		<van-field value="{{form.oldPass}}" type="password" label="旧密码" bind:change="oldChange" placeholder="请输入旧密码" />
+	</view>
+
+	<view class="item">
+		<van-field value="{{form.newPass}}" type="password" label="新密码" bind:change="newChange" placeholder="请输入新密码" />
+	</view>
+
+	<view class="item">
+		<van-field value="{{form.confirm}}" type="password" label="确认密码" bind:change="confirmChange" placeholder="请确认新密码" />
+	</view>
+
+	<view class="button-wrapper">
+		<van-button type="info" round bind:click="save">保存修改</van-button>
+	</view>
+</view>

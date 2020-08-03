@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "圈子",
+  "usingComponents": {
+    "van-button": "/vant-weapp/dist/button/index"
+  }
+}

@@ -1,0 +1,24 @@
+<view class="menu-wrapper">
+	<image src="{{menu.cover}}" class="cover"></image>
+	<view class="content-wrapper">
+		<view class="user-wrapper">
+			<image src="{{menu.author.avatar}}" class="avatar"></image>
+			<text>{{menu.author.username}}</text>
+		</view>
+		<view class="name">{{menu.name}}</view>
+		<view class="content">{{menu.description}}</view>
+		<view class="recipes-wrapper" wx:for="{{menu.recipes}}" wx:key="id" data-id="{{item.id}}" bindtap="recipeInfo">
+			<image src="{{item.cover}}" class="recipe-cover"></image>
+			<view class="recipe-info">
+				<view class="recipe-name">{{item.title}}</view>
+				<view class="recipe-author">{{item.author.username}}</view>
+				<van-rate readonly size="12px" value="{{ item.score }}" />
+			</view>
+		</view>
+		<view class="info-wrapper">
+			<view style="flex-grow:1">{{publishDate}}</view>
+			<view style="margin-right:10rpx">173收藏</view>
+			<view>1267点赞</view>
+		</view>
+	</view>
+</view>

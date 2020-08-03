@@ -1,0 +1,58 @@
+.recipes-wrapper {
+  padding: 20rpx 30rpx 0;
+}
+
+.item-wrapper {
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+
+.item-wrapper .cover {
+  width: 216rpx;
+  height: 150rpx;
+  margin-right: 30rpx;
+  border-radius: 2px;
+}
+
+.item-wrapper .name {
+  width: 400rpx;
+  margin-bottom: 20rpx;
+}
+
+.item-wrapper .author {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 15rpx;
+}
+
+.item-wrapper .info {
+  color: #999;
+  font-size: 12px;
+}
+
+.no-wrapper {
+  position: relative;
+  min-height: calc(100vh - 10px);
+}
+
+.no-info {
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -80%);
+}
+
+.no-img {
+  display: block;
+}
+
+.no-content {
+  margin-top: 30rpx;
+  text-align: center;
+  color: #999;
+}

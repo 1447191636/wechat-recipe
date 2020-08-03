@@ -1,0 +1,13 @@
+<view class="news-wrapper">
+	<!-- 提示框 -->
+	<van-dialog id="van-dialog" />
+	<block wx:for="{{list}}" wx:key="index">
+		<van-swipe-cell right-width="{{ 60 }}" async-close bind:close="onClose" data-id="{{item.id}}">
+			<view class="notify">
+				<van-image round width="30" height="30" src="{{item.sender.avatar}}" />
+				<text>{{item.sender.username}} {{item.content}} {{item.target.title}}</text>
+			</view>
+			<van-button type="danger" slot="right">删除</van-button>
+		</van-swipe-cell>
+	</block>
+</view>

@@ -1,0 +1,18 @@
+.item {
+  margin-top: 50rpx;
+}
+
+.button-wrapper {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-wrapper .van-button{
+  bottom: 50px;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, 0);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}

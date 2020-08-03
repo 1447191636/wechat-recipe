@@ -1,0 +1,25 @@
+.avatar-wrapper {
+  padding: 50rpx 15px;
+  display: flex;
+  align-items: center;
+  background: -webkit-linear-gradient(top, #e1e1e1, #fff);
+}
+
+.avatar-wrapper .username {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.avatar-wrapper .sign {
+  color: #333;
+  font-size: 12px;
+}
+
+.avatar-wrapper .van-image {
+  display: block;
+  margin-right: 20rpx;
+}
+
+.user-wrapper .van-cell {
+  padding: 20px 16px;
+}

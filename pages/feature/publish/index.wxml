@@ -1,0 +1,14 @@
+<view class="publish-wrapper">
+	<scroll-view scroll-x="true" class="scroll-wrapper">
+		<van-uploader file-list="{{ fileList }}" max-count="5" bind:after-read="afterRead" bind:delete="onDelete" image-fit="aspectFill"/>
+	</scroll-view>
+
+	<van-field value="{{ title }}" placeholder="标题" maxlength="20" bind:change="titleChange"/>
+
+	<van-field type="textarea" autosize value="{{ content }}" placeholder="说说你的心得~" border="{{false}}" maxlength="150" bind:change="contentChange"/>
+
+  <!-- 占位，把button挤下去 -->
+	<view style="flex-grow:1"></view>
+
+	<van-button round type="info" bind:click="publish">发布</van-button>
+</view>

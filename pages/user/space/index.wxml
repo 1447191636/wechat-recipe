@@ -1,0 +1,33 @@
+<view class="space-wrapper">
+	<view class="avatar-wrapper">
+		<van-cell title="头像">
+			<view class="upload-wrapper">
+				<van-uploader file-list="{{ fileList }}" max-count="1" bind:after-read="afterRead" bind:delete="onDelete" image-fit="aspectFill" />
+			</view>
+		</van-cell>
+	</view>
+
+	<view class="item">
+		<van-field value="{{userInfo.username}}" label="用户名" bind:change="nameChange" placeholder="请输入用户名" />
+	</view>
+
+	<view class="item">
+		<van-field value="{{ userInfo.phone }}" label="手机号码" bind:change="phoneChange" placeholder="请输入手机号码" />
+	</view>
+
+	<view class="item">
+		<van-field value="{{ userInfo.mail }}" label="电子邮箱" bind:change="mailChange" placeholder="请输入电子邮箱" />
+	</view>
+
+	<view class="item">
+		<van-field type="textarea" label="个人简介" autosize value="{{ userInfo.description }}" maxlength="150" bind:change="descriptionChange" placeholder="请输入个人简介" />
+	</view>
+
+	<view class="item">
+		<van-field type="textarea" label="个性签名" autosize value="{{ userInfo.sign }}" maxlength="150" bind:change="signChange" placeholder="请输入个性签名" />
+	</view>
+
+	<view class="button-wrapper">
+		<van-button type="info" round bind:click="save">立即保存</van-button>
+	</view>
+</view>

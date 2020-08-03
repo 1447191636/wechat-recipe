@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "van-swipe-cell": "/vant-weapp/dist/swipe-cell/index",
+    "van-dialog": "/vant-weapp/dist/dialog/index",
+    "van-button": "/vant-weapp/dist/button/index",
+    "van-image": "/vant-weapp/dist/image/index"
+  }
+}

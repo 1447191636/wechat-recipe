@@ -1,0 +1,16 @@
+<view class="account-wrapper">
+	<view class="description">
+		<text>
+      1.用户第一次登陆小程序会自动创建账号。
+      2.用户可以使自己的小程序账号和PC账号绑定，将小程序账号数据同步至PC账号。
+      3.每个用户只可以绑定一次。
+      4.绑定账号会使小程序数据迁移至PC账号，可能会使部分小程序账号数据丢失。
+	  </text>
+	</view>
+
+	<input class="input" type='text' placeholder='请输入要绑定的账户用户名' bindinput="nameChange" value="{{username}}"></input>
+
+	<input class="input" type='password' placeholder='请输入要绑定的账户密码' bindinput="passChange" value="{{password}}" style="margin-top:30px"></input>
+
+	<van-button type="info" round bind:click='bind'>绑定账号</van-button>
+</view>
